@@ -22,7 +22,7 @@ public class httpClientPost {
 
         // 设置超时
 
-        post = new HttpPost("http://221.224.13.41:8088/GIS_GMapCacheProxys/bjData/partsChange");
+        post = new HttpPost("http://xxxx:8088/GIS_GMapCacheProxys/bjData/partsChange");
         // 构造消息头
         post.setHeader("Content-type", "application/json; charset=utf-8");
         post.setHeader("key", "5fL2pZmfIvPOcchD0HN9_rgHmega");
