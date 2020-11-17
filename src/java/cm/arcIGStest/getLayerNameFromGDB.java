@@ -1,6 +1,6 @@
 package cm.arcIGStest;
 
-import cm.arcIGSForGDB.initializeArcGISLicenses;
+import cm.arcIGSforGDB.initializeArcGISLicenses;
 import com.esri.arcgis.carto.Map;
 import com.esri.arcgis.datasourcesGDB.FileGDBWorkspaceFactory;
 import com.esri.arcgis.geodatabase.*;
@@ -59,11 +59,12 @@ public class getLayerNameFromGDB {
                 //获取layerCode（标准名）
                 pFeatureClass = pFeatureWorkspace.openFeatureClass(layerName);
                 String layerCode = pFeatureClass.getAliasName();
-                //System.out.println(layerCode);
-               // layMap.setName(layerCode);
                 System.out.println(layerCode);
+               // layMap.setName(layerCode);
+               // System.out.println(layerCode);
                 //创建IFeatureClass对象
                 IFeatureClass pFeaCls = pFeatureWorkspace.openFeatureClass(layerCode);
+
 
                 //获取图层里的一行数据信息，1代表第一行
                 //IFeature iFeature = iFeatureClass.getFeature(1);
@@ -71,7 +72,7 @@ public class getLayerNameFromGDB {
                 IFeatureDataset featureDataset = pFeaCls.getFeatureDataset();
                 //获取字段个数
                 int fieldCount = fields.getFieldCount();
-                System.out.println(fieldCount);
+                //System.out.println(fieldCount);
                 for (int i = 0; i < fieldCount; i ++){
 
                     IField field = fields.getField(i);
@@ -80,6 +81,7 @@ public class getLayerNameFromGDB {
                    //System.out.println(fieldAliasName);
                     //获取字段标准名
                     String fieldName = field.getName();
+                    System.out.println(fieldName);
 
 
                     List<IFeature> list = new ArrayList<IFeature>();
